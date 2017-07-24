@@ -62,10 +62,12 @@ html body form button {
 
 .messages {
 	display: block;
-	margin-top: 92px;
-	margin-bottom: 93px;
-	min-height: 90vh;
-	overflow-x: hidden;
+	margin-bottom: 200px;
+	position: relative;
+	top: 60px;
+	height: auto;
+	overflow: visible;
+	min-height: 200px;
 }
 
 .messages div {
@@ -74,6 +76,9 @@ html body form button {
 	float: right;
 	width: 100%;
 	margin-top: 16px; 
+}
+.messages .row:last-of-type {
+	margin-bottom: 90px;  
 }
 
 nav {
@@ -114,8 +119,15 @@ ul img {
 	left: 0;
 	position: absolute;
 	width: 135px;
+	font-weight: 600;
+	font-size: 2rem;
+	display: inline;
 }
-
+.-left div {
+	display: inline;
+	top: 5px;
+	position: absolute;
+}
 form {
 	padding: 3px;
 	position: fixed;
@@ -266,7 +278,7 @@ ul img {
 
 .usersOnline {
 	font-size: 1.2rem;
-	/*display: none;*/
+	display: none;
 	position: fixed;
 	background: #63147e;
 	bottom: 80px;
@@ -364,8 +376,17 @@ label {
 	/*display: none;*/
 	opacity: .3;
 }
-.top_menu_trigger {
+.top_menu_trigger,
+.send i{
 	cursor: pointer;
+}
+.top_menu_trigger i {
+	font-size: 2.3rem;
+	line-height: 3rem;
+}
+.top_menu_trigger i:hover,
+.send i:hover{
+	color: #39034b;
 }
 .navHidden {
 	top: -120% !important;
@@ -379,25 +400,57 @@ label {
 	width: 100%;
 	position: fixed;
 	top: 2% !important;
-	text-align: center;
+	text-align: left;
 	margin: 0;
 	padding: 0;
 	padding-top: 150px;
 	z-index: 99;
 	top: 0%;
 	transition: top .9s ease;
+
 }
 .mainNav li{
 	margin-bottom: 40px;
 	font-size: 1.5rem;
 	cursor: pointer;
+	margin-left: 35%; 
 }
 .mainNav li:hover {
 	color: #39034b;
+}
+.mainNav li i {
+		line-height: 1rem;
+		font-size: 2.5rem; 
+		padding: 10px;
+		top: .55rem;
+		position: relative; 
 }
 .overlay {
 	z-index: 101;
 }
 .idCard {
 	
+}
+.send i {
+	 -ms-transform: rotate(-45deg); /* IE 9 */
+    -ms-transform-origin: 33% 33%; /* IE 9 */
+    -webkit-transform: rotate(-45deg); /* Chrome, Safari, Opera */
+    -webkit-transform-origin: 33% 33%; /* Chrome, Safari, Opera */
+    transform: rotate(-45deg);
+    transform-origin: 33% 33%;
+    font-size: 2rem;
+    line-height: 2.5rem;
+}
+.whatever {
+	font-size: 20px;
+	background:red;
+	position: fixed;
+	bottom: 0px;
+	right: 0px;
+	cursor: pointer;
+	border-radius: 78px;
+	width: 178px;
+	height: 78px;
+text-align: center;
+color: white;
 }
