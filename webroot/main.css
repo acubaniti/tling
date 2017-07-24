@@ -441,16 +441,4 @@ label {
     font-size: 2rem;
     line-height: 2.5rem;
 }
-.whatever {
-	font-size: 20px;
-	background:red;
-	position: fixed;
-	bottom: 0px;
-	right: 0px;
-	cursor: pointer;
-	border-radius: 78px;
-	width: 178px;
-	height: 78px;
-text-align: center;
-color: white;
-}
+ 
