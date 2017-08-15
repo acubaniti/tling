@@ -48,8 +48,7 @@ var server = require( 'http' )
 var io = require( 'socket.io' )
     .listen( server );
 users = [];
-connections = [];
-var socketCount = 0;
+connections = [];  
 // Server start
 server.listen( process.env.PORT || 3000 );
 console.log( "Server started!" );
@@ -61,16 +60,14 @@ app.get( '/', function( req, res )
 io.sockets.on( 'connection', function( socket )
 {
     // On Connect
-    connections.push( socket );
-    socketCount++;
+    connections.push( socket ); 
     console.log( 'Connected: %s sockets connected', connections.length );
     // On Disconnect
     socket.on( 'disconnect', function( data )
     {
         // if(!socket.username) return;
         users.splice( users.indexOf( socket.username ), 1 );
-        updateUsernames();
-        socketCount--
+        updateUsernames(); 
         connections.splice( connections.indexOf( socket ), 1 );
         console.log( 'Disconnected: %s sockets connected', connections.length );
     } );
